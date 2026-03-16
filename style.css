@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Syne:wght@400..800&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    background-image: url(backgroundv6.png);
+}
+
+.nav_bar {
+    background-color: rgb(75, 75, 75);
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: right;
+}
+
+#search-bar {
+    padding: 8px;
+    width: 350px;
+    background-color: #dadada;
+    border: 3px solid #262626;
+    border-radius: 15px;
+    color: #000000; 
+}
+
+#search-bar::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+#search-button {
+    padding: 8px 16px;
+    background-color: #262626;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #f1efef;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+#pokedex-logo {
+    text-align: center;
+}
+
+.pokemon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 25px;
+    position: relative;
+    background-color: rgb(75, 75, 75);
+}
+
+.pokemon-container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.pokemon-card {
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    border: 1px solid #ddd;
+    min-height: 180px;
+    /* background: linear-gradient(135deg, var(--type-color1, #f5f5f5), var(--type-color2, #f5f5f5), var(--type2-color1, var(--type-color1, #f5f5f5)), var(--type2-color2, var(--type-color2, #f5f5f5))); */
+    text-decoration: dotted;
+    background-image: url("grass.png");
+    background-size: cover;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    border-color: rgba(255, 255, 255, 0.3); 
+}
+
+.pokemon-card h2 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.pokemon-card p {
+    margin: 5px 0;
+    color: #000000;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+.pokemon-card p strong {
+    color: #000000;
+    font-weight: bold;
+}
+
+.text{
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
